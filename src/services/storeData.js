@@ -12,7 +12,7 @@ async function storeData(id, data) {
       databaseId: 'prediction',
     });
  
-    const predictCollection = db.collection('cancer-prediction');
+    const predictCollection = db.collection('predictions');
     return predictCollection.doc(id).set(data);
   }catch(error) {
     console.error(error);

@@ -39,7 +39,7 @@ async function predictHistories(request, h) {
   const db = new Firestore({
     projectId: "submissionmlgc-muqtadahasbya",
   });
-  const predictCollection = db.collection("cancer-prediction");
+  const predictCollection = db.collection("predictions");
   const snapshot = await predictCollection.get();
   const result = [];
   snapshot.forEach((doc) => {
